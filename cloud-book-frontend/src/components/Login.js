@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 // import { baseUrl } from '../url';
 
 
-const host = 'https://cloud-book-server.vercel.app';
+const host = 'https://cloud-book-server.vercel.app/login';
 const Login = (props) => {
         let navigate = useNavigate();
         const [credentials, setCredentials] = useState({email:'',password:''})
@@ -12,7 +12,7 @@ const Login = (props) => {
             //API call
             const response = await fetch(`${host}/api/auth/login`, {
                 method: "POST", // *GET, POST, PUT, DELETE, etc.
-                mode: "no-cors", // no-cors, *cors, same-origin
+                mode: "cors", // no-cors, *cors, same-origin
                 headers: {
                     "Content-Type": "application/json"
                 },

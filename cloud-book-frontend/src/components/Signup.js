@@ -2,7 +2,7 @@ import React,{useState}from 'react'
 import {useNavigate} from 'react-router-dom';
 // import { baseUrl } from '../url';
 
-const host = 'https://cloud-book-server.vercel.app';
+const host = 'https://cloud-book-server.vercel.app/signup';
 
 const Signup = (props) => {
 
@@ -14,7 +14,7 @@ const Signup = (props) => {
             //API call
             const response = await fetch(`${host}/api/auth/createUser`, {
                 method: "POST", // *GET, POST, PUT, DELETE, etc.
-                mode: "no-cors", // no-cors, *cors, same-origin
+                mode: "cors", // no-cors, *cors, same-origin
                 headers: {
                     "Content-Type": "application/json"
                 },
