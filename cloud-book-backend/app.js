@@ -15,8 +15,8 @@ app.use(cors({
 const port = process.env.PORT;
 app.use(express.json())//-->Middleware
 
-app.use('/api/auth',require('./routes/auth'))
-app.use('/api/notes',require('./routes/notes'))
+app.use('api/auth',require('./routes/auth'))
+app.use('api/notes',require('./routes/notes'))
 
 app.listen(port, () => {
   console.log(`cloudbook's backend listening at http://localhost:${port}`)
