@@ -8,7 +8,7 @@ const app = express()
 
  
 app.use(cors({
-  origin:["https://cloud-book-client.vercel.app/login"],
+  origin:["https://cloud-book-client.vercel.app/"],
   methods:["POST" , "GET" , "PUT" , "DELETE"],
   credentials: true
 }))//-->middleware
