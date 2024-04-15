@@ -7,7 +7,11 @@ connectToMongo();
 const app = express()
 
  
-app.use(cors())//-->middleware
+app.use(cors({
+  origin:["https://cloud-book-client.vercel.app/"],
+  methods:["POST" , "GET" , "PUT" , "DELETE"],
+  credentials: true
+}))//-->middleware
 const port = process.env.PORT;
 app.use(express.json())//-->Middleware
 
