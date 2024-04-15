@@ -2,7 +2,7 @@ import React,{useState}from 'react'
 import {useNavigate} from 'react-router-dom';
 // import { baseUrl } from '../url';
 
-const host = 'https://cloud-book-server.vercel.app/signup';
+const host = 'https://cloud-book-server.vercel.app/';
 
 const Signup = (props) => {
 
