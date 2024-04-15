@@ -1,6 +1,6 @@
 const express = require('express')
 const connectToMongo = require('./dataBase');
-var cors = require('cors')
+const cors = require('cors')
 require('dotenv').config()
 
 connectToMongo();
@@ -8,10 +8,9 @@ const app = express()
 
  
 app.use(cors({
-  origin:["https://cloud-book-client.vercel.app"],
+  origin:["https://cloud-book-client.vercel.app/"],
   methods:["POST" , "GET" , "PUT" , "DELETE"],
   credentials: true,
-  'Access-Control-Allow-Origin': true
 }))//-->middleware
 const port = process.env.PORT;
 app.use(express.json())//-->Middleware
