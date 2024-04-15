@@ -10,7 +10,8 @@ const app = express()
 app.use(cors({
   origin:["https://cloud-book-client.vercel.app"],
   methods:["POST" , "GET" , "PUT" , "DELETE"],
-  credentials: true
+  credentials: true,
+  'Access-Control-Allow-Origin': true
 }))//-->middleware
 const port = process.env.PORT;
 app.use(express.json())//-->Middleware
