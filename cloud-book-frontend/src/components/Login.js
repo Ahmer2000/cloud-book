@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 // import { baseUrl } from '../url';
 
 
-const host = 'http://localhost:5000';
+const host = 'cloud-book-server.vercel.app';
 const Login = (props) => {
         let navigate = useNavigate();
         const [credentials, setCredentials] = useState({email:'',password:''})

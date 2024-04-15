@@ -3,7 +3,7 @@ import NoteContext from "./NoteContext";
 // import { baseUrl } from "../../url";
 // props as param
 
-const host = 'http://localhost:5000';
+const host = 'cloud-book-server.vercel.app';
 const NoteState = (props) => {
   // const s1 = {
   //     name:'Ahmer',
