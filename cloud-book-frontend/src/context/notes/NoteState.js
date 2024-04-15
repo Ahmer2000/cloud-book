@@ -26,7 +26,7 @@ const NoteState = (props) => {
     //API call
     const response = await fetch(`${host}/api/notes/fetchAllNotes`, {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
+      mode: "*cors", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
         "auth-token":
@@ -42,7 +42,7 @@ const NoteState = (props) => {
     //API call
     const response = await fetch(`${host}/api/notes/addNote`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
+      mode: "*cors", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
         "auth-token":
@@ -59,7 +59,7 @@ const NoteState = (props) => {
     //API call
     const response = await fetch(`${host}/api/notes/deleteNote/${id}`, {
       method: "DELETE", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
+      mode: "*cors", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
         "auth-token":
@@ -80,7 +80,7 @@ const NoteState = (props) => {
     //API call
     const response = await fetch(`${host}/api/notes/updateNote/${id}`, {
       method: "PUT", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
+      mode: "*cors", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
         "auth-token":
