@@ -1,0 +1,1 @@
+export const baseUrl = 'https://cloudbook-frontend.onrender.com'
