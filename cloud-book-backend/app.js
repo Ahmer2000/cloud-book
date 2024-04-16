@@ -15,6 +15,10 @@ app.use(cors({
 const port = process.env.PORT;
 app.use(express.json())//-->Middleware
 
+app.use(function(res) {
+  res.header('Access-Control-Allow-Origin',"https://cloud-book-client.vercel.app")
+})
+
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes',require('./routes/notes'))
 
