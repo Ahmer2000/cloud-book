@@ -8,16 +8,12 @@ const app = express()
 
  
 app.use(cors({
-  origin:["https://cloud-book-client.vercel.app"],
+  origin:"https://cloud-book-client.vercel.app",
   methods:["POST" , "GET" , "PUT" , "DELETE"],
   credentials: true,
 }))//-->middleware
 const port = process.env.PORT;
 app.use(express.json())//-->Middleware
-
-app.use(function(res) {
-  res.header('Access-Control-Allow-Origin',"https://cloud-book-client.vercel.app")
-})
 
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes',require('./routes/notes'))
