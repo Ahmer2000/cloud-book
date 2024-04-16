@@ -1,1 +1,1 @@
-export const baseUrl = 'https://cloudbook-frontend.onrender.com'
+export const baseUrl = 'https://cloud-book-server.vercel.app/'

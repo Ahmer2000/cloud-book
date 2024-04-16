@@ -1,9 +1,9 @@
 import { useState } from "react";
 import NoteContext from "./NoteContext";
-// import { baseUrl } from "../../url";
+import { baseUrl } from "../../url";
 // props as param
 
-const host = 'https://cloud-book-server.vercel.app/';
+const host = baseUrl;
 const NoteState = (props) => {
   // const s1 = {
   //     name:'Ahmer',
