@@ -14,7 +14,7 @@ const Signup = (props) => {
             //API call
             const response = await fetch(`${host}/api/auth/createUser`, {
                 method: "POST", // *GET, POST, PUT, DELETE, etc.
-                mode: "cors", // no-cors, *cors, same-origin
+                // mode: "cors", // no-cors, *cors, same-origin
                 headers: {
                     "Content-Type": "application/json"
                 },
