@@ -9,7 +9,7 @@ const app = express()
  
 app.use(cors({
   origin:["https://cloud-book-client.vercel.app"],
-  methods:["POST"],
+  methods:["POST" , "GET" , "PUT" , "DELETE"],
   credentials: true,
 }))//-->middleware
 const port = process.env.PORT;
