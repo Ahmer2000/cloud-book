@@ -26,11 +26,12 @@ const NoteState = (props) => {
     //API call
     const response = await fetch(`${host}/api/notes/fetchAllNotes`, {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
-      mode: "same-origin", // no-cors, *cors, same-origin
+      // mode: "same-origin", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          localStorage.getItem('token')
+          localStorage.getItem('token'),
+          'Access-Control-Allow-Origin': 'true'
       }
     });
     let json = await response.json()
@@ -42,11 +43,12 @@ const NoteState = (props) => {
     //API call
     const response = await fetch(`${host}/api/notes/addNote`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
-      mode: "same-origin", // no-cors, *cors, same-origin
+      // mode: "same-origin", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          localStorage.getItem('token')
+          localStorage.getItem('token'),
+          'Access-Control-Allow-Origin': 'true'
       },
       body: JSON.stringify({ title, description, tag }) // body data type must match "Content-Type" header
     });
@@ -59,11 +61,12 @@ const NoteState = (props) => {
     //API call
     const response = await fetch(`${host}/api/notes/deleteNote/${id}`, {
       method: "DELETE", // *GET, POST, PUT, DELETE, etc.
-      mode: "same-origin", // no-cors, *cors, same-origin
+      // mode: "same-origin", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          localStorage.getItem('token')
+          localStorage.getItem('token'),
+          'Access-Control-Allow-Origin': 'true'
       }
     });
     const json = await response.json();
@@ -80,11 +83,12 @@ const NoteState = (props) => {
     //API call
     const response = await fetch(`${host}/api/notes/updateNote/${id}`, {
       method: "PUT", // *GET, POST, PUT, DELETE, etc.
-      mode: "same-origin", // no-cors, *cors, same-origin
+      // mode: "same-origin", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          localStorage.getItem('token')
+          localStorage.getItem('token'),
+          'Access-Control-Allow-Origin': 'true'
       },
       body: JSON.stringify({ title, description, tag }), // body data type must match "Content-Type" header
     });
